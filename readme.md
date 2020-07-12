@@ -4,7 +4,7 @@
 
 Este projeto foi construído durante a Semana Fullstack Master do [DevPleno](https://devpleno.com). Uma versão online deste projeto pode ser encontrada em: https://palpite-box.tuliofaria.dev/.
 
-![Preview](https://github.com/tuliofaria/palpite-box/blob/master/print.png?raw=true)
+![Preview](https://github.com/samuelemes/Palpite-Box/blob/master/print.png?raw=true)
 
 ## Início
 
@@ -43,7 +43,7 @@ rapidly building custom designs.
 
 ## Author:
 
-* **Tulio Faria** - [LinkedIn](https://www.linkedin.com/in/tuliofaria/)
+* **Samuel Lemes** - [LinkedIn](https://www.linkedin.com/in/samuel-de-moraes-lemes-a2a47321/)
 
 
 ## Licença
