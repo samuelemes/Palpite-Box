@@ -23,6 +23,7 @@ const Pesquisa = () => {
     } catch (err) {
     }
   }
+
   const onChange = evt => {
     const value = evt.target.value
     const key = evt.target.name
@@ -47,37 +48,42 @@ Por isso, estamos sempre abertos a ouvir a sua opinião.</p>
         
         <label className='font-bold'>Nota:</label>
         <div className='flex py-6'>
-          {notas.map(nota => {
+          {notas.map(value => {
             return (
               <label className='block w-1/6 text-center'>
-                {nota}<br />
-                <input type='radio' name='Nota' value={nota} onChange={onChange} />
+                { value }<br />
+                <input type='radio' name='Nota' value={value} onChange={onChange} />
               </label>
             )
           })
           }
         </div>
-
         <button className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>
       </div>}
-      {sucess && <div className='w-1/5 mx-auto'>
-        <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>
-          Obrigado por contribuir com sua sugestão ou crítica.
-        </p>
-        {
-          retorno.showCoupon && <div className='text-center border p-4 mb-4'>
-            Seu cupom: <br />
-            <span className='font-bold text-2xl'>{retorno.Cupom}</span>
-          </div>
-        }
-        {
-          retorno.showCoupon && <div className='text-center border p-4 mb-4'>
-            <span className='font-bold block mb-2'>{retorno.Promo}</span>
-            <br />
-            <span className='italic'>Tire um print ou foto desta tela e apresente ao garçon.</span>
-          </div>
-        }
-      </div>}
+
+      {
+        sucess && 
+        <div className='w-1/5 mx-auto'>
+          <p className='mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'>
+            Obrigado por contribuir com sua sugestão ou crítica.
+          </p>
+          console.log('nota')
+          {
+            retorno.showCoupon && 
+            <div className='text-center border p-4 mb-4'>
+              Seu cupom: <br />
+              <span className='font-bold text-2xl'>{retorno.Cupom}</span>
+            </div>
+          }
+          {
+            retorno.showCoupon && <div className='text-center border p-4 mb-4'>
+              <span className='font-bold block mb-2'>{retorno.Promo}</span>
+              <br />
+              <span className='italic'>Tire um print ou foto desta tela e apresente ao garçon.</span>
+            </div>
+          }
+        </div>
+      }
     </div>
   )
 }

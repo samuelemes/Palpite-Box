@@ -10,7 +10,7 @@ export default async (req, res) => {
       private_key: fromBase64(process.env.SHEET_PRIVATE_KEY)
     })
     await doc.loadInfo()
-
+    
     const sheet = doc.sheetsByIndex[2]
     await sheet.loadCells('A2:B2')
 
@@ -21,6 +21,8 @@ export default async (req, res) => {
       showCoupon: mostrarPromocaoCell.value === 'VERDADEIRO',
       message: textoCell.value
     }))
+
+    console.log(mostrarPromocaoCell)
 
   } catch (err) {
     res.end(JSON.stringify({

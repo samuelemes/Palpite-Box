@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='bg-gray-700 p-4'>
       <div className='container mx-auto text-center font-bold text-white'>
-        Projeto desenvolvido por: {' '}
+        Projeto desenvolvido por: {' Samuel Lemes '}
         {/* <a className='hover:underline' href='https://tuliofaria.net'>Tulio Faria</a> / {' '} */}
         <a className='hover:underline' href='https://linkedin.com/in/https://www.linkedin.com/in/samuel-de-moraes-lemes-a2a47321/'>Linkedin</a> / {' '}
         <a className='hover:underline' href='https://github.com/samuelemes'>Github</a>
